@@ -6,7 +6,6 @@ const Buttons = ({onClick}) => {
     <div className='buttons'>
       <NewQuote onClick={onClick}/>
       <TweetQuote />
-      <div>this is text</div>
     </div>
   )
 }
