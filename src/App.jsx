@@ -11,16 +11,17 @@ function App() {
 
   const NewQuoteAndAuthor = () => {
     const req = new XMLHttpRequest();
-    req.open('GET', 'https://type.fit/api/quotes', true);
+    req.open('GET', 'https://goquotes-api.herokuapp.com/api/v1/random?count=500', true);
+    req.setRequestHeader('Accept', 'application/json');
     req.send();
     req.onload = () => {
 
       const json = JSON.parse(req.response);
 
-      const randoNumber = Math.floor(Math.random() * json.length);
+      const randoNumber = Math.floor(Math.random() * json.quotes.length);
       
-      setQuote(quote = json[randoNumber].text);
-      setAuthor(author = json[randoNumber].author);
+      setQuote(quote = json.quotes[randoNumber].text);
+      setAuthor(author = json.quotes[randoNumber].author);
     }
   }
 
