@@ -6,7 +6,7 @@ import TextAndAuthor from './Components/TextAndAuthor';
 
 function App() {
 
-  var [quote, setQuote] = useState('');
+  var [quote, setQuote] = useState('Quote API is Broken :(');
   var [author, setAuthor] = useState('');
 
   const NewQuoteAndAuthor = () => {
