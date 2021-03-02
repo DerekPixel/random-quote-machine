@@ -30,10 +30,19 @@ function App() {
   }
 
   return (
-    <div id='quote-box'>
-      <TextAndAuthor text={quote} author={author} />
-      <Buttons onClick={NewQuoteAndAuthor} />
-      
+    <div>
+      <div id='quote-box'>
+        <h1>Random Quote Machine</h1>
+        <TextAndAuthor text={quote} author={author} />
+        <Buttons onClick={NewQuoteAndAuthor} />
+      </div>
+      <div className="bottom-text">
+        <p>Made by Derek Price</p>
+          <a href="https://github.com/DerekPixel/random-quote-machine" className="github-link">
+            <span className="iconify" data-icon="akar-icons:github-fill" data-inline="false"></span>
+            GitHub Repo
+          </a>
+      </div>
     </div>
   );
 }
