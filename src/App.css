@@ -57,6 +57,9 @@ table {
 body {
   height: 100vh;
   background-color: lightblue;
+  background-image: url('./images/pexels-kaboompics-com-6357\ smaller.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,9 +67,12 @@ body {
 }
 
 #quote-box {
-  background-color: lightgoldenrodyellow;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85);
 
   border-radius: 20px;
+
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -78,12 +84,24 @@ body {
   height: 300px;
 }
 
+h1 {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px 20px 0 0;
+  color: white;
+  width: 100%;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  padding: 10px 0;
+
+}
+
 .textandauthor {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  height: 150px;
+  height: 200px;
 }
 
 #text {
@@ -94,13 +112,48 @@ body {
 }
 
 .buttons {
+  position: absolute;
+  bottom: 10px;
   width: inherit;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
 }
 
+button {
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+
+  /* outline: none; */
+
+  border-color: rgb(29, 161, 242);
+  border-style: solid;
+  border-width: 1px;
+}
+
 a {
-  color: black;
+  color: rgb(29, 161, 242);
   text-decoration: none;
+}
+
+.bottom-text {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-text p,
+.bottom-text a {
+  margin: 0 10px;
+  color: white;
+}
+
+.iconify {
+  /* height: 100%; */
+  margin-right: 5px;
 }
